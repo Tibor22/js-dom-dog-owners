@@ -17,7 +17,7 @@ body {
   font-family: sans-serif;
   color: var(--dark-text);
   background-color: var(--white);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 img {
@@ -25,6 +25,7 @@ img {
   max-width: 100%;
   object-fit: cover;
   margin: 0 auto;
+  max-height: 300px;
 }
 
 /* Layout */
@@ -35,7 +36,7 @@ img {
 }
 
 .header h1 {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -53,11 +54,11 @@ img {
 
 .main {
   display: grid;
-  grid-template-columns: minmax(300px, 500px);
+  grid-template-columns: minmax(300px, 400px);
 
   justify-content: center;
 
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .main__dog-section {
@@ -99,7 +100,7 @@ img {
 }
 
 .dogs-list__button--add {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .main__dog-section h2 {
@@ -183,4 +184,9 @@ textarea {
   resize: none;
   font: inherit;
   padding: 0.5rem;
+}
+
+.question-container {
+  display: flex;
+  justify-content: space-between;
 }
