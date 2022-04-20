@@ -7,7 +7,7 @@ export function changeText(e, dogSection) {
     btn.innerText = "Good Dog";
     question.innerText = "Is naughty? Yes!";
   } else {
-    btn ? (btn.innerText = "Bad Dog") : "";
+    btn ? (btn.innerText = "Bad Dog") : "Yes!";
     question.innerText = "Is naughty? No!";
   }
 }

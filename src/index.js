@@ -17,7 +17,9 @@ addDogBtn.addEventListener("click", () => addDog(dogSection));
 
 addDog(dogSection);
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", renderForm);
+
+export function renderForm(e) {
   e.preventDefault();
   console.log(e.target[2].value);
 
@@ -33,4 +35,4 @@ form.addEventListener("submit", (e) => {
   renderDogCard(e, data, dogSection);
   const addDogBtn = document.querySelector(".dogs-list__button--add");
   addDogBtn.addEventListener("click", () => addDog(dogSection));
-});
+}
