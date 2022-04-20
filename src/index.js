@@ -27,7 +27,10 @@ form.addEventListener("submit", (e) => {
     isGoodDog: true,
     image: e.target[1].value,
   });
-  dogListContainer.innerHTML = "";
+  dogListContainer.innerHTML = `<li class="dogs-list__button dogs-list__button--add">+</li>`;
   renderNavigation(dogs);
+
   renderDogCard(e, data, dogSection);
+  const addDogBtn = document.querySelector(".dogs-list__button--add");
+  addDogBtn.addEventListener("click", () => addDog(dogSection));
 });
