@@ -7,8 +7,9 @@ export function renderDogCard(e, data, dogSection) {
   data.forEach((dog, i) => {
     if (
       e.target.innerText === dog.name ||
-      (e.target.classList.contains("form") && i === data.length - 1)
+      (e.target.classList.contains("form") && i === 0)
     ) {
+      console.log(e.target.innerText);
       html += `   <h2>${dog.name}</h2>
             <img
               src=${dog.image}

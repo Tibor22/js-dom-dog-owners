@@ -1,5 +1,5 @@
 let form;
-import { renderForm } from "./index.js";
+import { renderForm } from "./renderForm.js";
 
 export function addDog(dogSection) {
   dogSection.innerHTML = "";
@@ -28,7 +28,8 @@ export function addDog(dogSection) {
 
   dogSection.insertAdjacentHTML("beforeend", html);
   form = document.querySelector(".form");
-  form.addEventListener("submit", renderForm);
+
+  form.addEventListener("submit", (e) => renderForm(e, data, dogSection));
 }
 
 export { form };
